@@ -1,0 +1,208 @@
+[14:34:38.856] [INFO] Initializing Storybook
+[14:34:39.451] [DEBUG] Getting package.json info for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:39.451] [DEBUG] Getting CLI versions from NPM for storybook...
+[14:34:39.451] [DEBUG] Executing command: npm info storybook version
+[14:34:39.940] [INFO] Adding Storybook version 10.2.10 to your project
+[14:34:39.941] [DEBUG] Project type detected: react
+[14:34:39.941] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:39.942] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:39.942] [INFO] Framework detected: react-vite
+[14:34:39.942] [DEBUG] Getting installed version for vitest...
+[14:34:39.942] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:34:40.271] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:34:40.587] [DEBUG] Error finding installations for vitest: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:34:40.587] [DEBUG] No installations found for vitest
+[14:34:40.587] [DEBUG] Getting installed version for msw...
+[14:34:40.587] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:34:40.919] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:34:41.241] [DEBUG] Error finding installations for msw: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:34:41.241] [DEBUG] No installations found for msw
+[14:34:41.243] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:41.243] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:41.243] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:41.244] [DEBUG] Using cached version for storybook...
+[14:34:41.244] [DEBUG] Getting CLI versions from NPM for @storybook/react-vite...
+[14:34:41.244] [DEBUG] Executing command: npm info @storybook/react-vite version
+[14:34:41.245] [DEBUG] Getting CLI versions from NPM for @chromatic-com/storybook...
+[14:34:41.245] [DEBUG] Executing command: npm info @chromatic-com/storybook version
+[14:34:41.247] [DEBUG] Getting CLI versions from NPM for @storybook/addon-vitest...
+[14:34:41.247] [DEBUG] Executing command: npm info @storybook/addon-vitest version
+[14:34:41.248] [DEBUG] Getting CLI versions from NPM for @storybook/addon-a11y...
+[14:34:41.248] [DEBUG] Executing command: npm info @storybook/addon-a11y version
+[14:34:41.249] [DEBUG] Getting CLI versions from NPM for @storybook/addon-docs...
+[14:34:41.249] [DEBUG] Executing command: npm info @storybook/addon-docs version
+[14:34:41.251] [DEBUG] Getting CLI versions from NPM for @storybook/addon-onboarding...
+[14:34:41.251] [DEBUG] Executing command: npm info @storybook/addon-onboarding version
+[14:34:43.182] [INFO] - Configuring main.ts
+[14:34:43.183] [INFO] - Configuring preview.ts
+[14:34:43.183] [INFO] - Adding Storybook command to package.json
+[14:34:43.184] [DEBUG] Getting package.json info for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:43.184] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:43.184] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:43.184] [INFO] - Copying framework templates
+[14:34:43.193] [DEBUG] Executing command: npm config get registry -ws=false -iwr
+[14:34:43.769] [INFO] Storybook configuration generated
+[14:34:43.770] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:43.770] [DEBUG] Using cached installed version for vitest...
+[14:34:43.770] [DEBUG] Getting installed version for @vitest/coverage-v8...
+[14:34:43.770] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:34:44.117] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:34:44.438] [DEBUG] Error finding installations for @vitest/coverage-v8: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:34:44.438] [DEBUG] No installations found for @vitest/coverage-v8
+[14:34:44.438] [DEBUG] Getting installed version for @vitest/coverage-istanbul...
+[14:34:44.438] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:34:44.773] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:34:45.105] [DEBUG] Error finding installations for @vitest/coverage-istanbul: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:34:45.105] [DEBUG] No installations found for @vitest/coverage-istanbul
+[14:34:45.106] [INFO] Adding devDependencies:
+- storybook@^10.2.10
+- @storybook/react-vite@^10.2.10
+- @chromatic-com/storybook@^5.0.1
+- @storybook/addon-vitest@^10.2.10
+- @storybook/addon-a11y@^10.2.10
+- @storybook/addon-docs@^10.2.10
+- @storybook/addon-onboarding@^10.2.10
+- vitest
+- playwright
+- @vitest/browser-playwright
+- @vitest/coverage-v8
+[14:34:45.106] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:45.106] [DEBUG] Using cached version for storybook...
+[14:34:45.106] [DEBUG] Using cached version for @storybook/react-vite...
+[14:34:45.106] [DEBUG] Using cached version for @chromatic-com/storybook...
+[14:34:45.106] [DEBUG] Using cached version for @storybook/addon-vitest...
+[14:34:45.106] [DEBUG] Using cached version for @storybook/addon-a11y...
+[14:34:45.106] [DEBUG] Using cached version for @storybook/addon-docs...
+[14:34:45.106] [DEBUG] Using cached version for @storybook/addon-onboarding...
+[14:34:45.106] [DEBUG] Getting CLI versions from NPM for vitest...
+[14:34:45.106] [DEBUG] Executing command: npm info vitest version
+[14:34:45.645] [DEBUG] Getting CLI versions from NPM for playwright...
+[14:34:45.645] [DEBUG] Executing command: npm info playwright version
+[14:34:46.621] [DEBUG] Getting CLI versions from NPM for @vitest/browser-playwright...
+[14:34:46.621] [DEBUG] Executing command: npm info @vitest/browser-playwright version
+[14:34:47.130] [DEBUG] Getting CLI versions from NPM for @vitest/coverage-v8...
+[14:34:47.130] [DEBUG] Executing command: npm info @vitest/coverage-v8 version
+[14:34:47.744] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:34:47.744] [INFO] Dependencies added to package.json
+[14:34:47.744] [INFO] Installing dependencies...
+[14:34:47.744] [INFO] Installing dependencies...
+[14:34:47.745] [DEBUG] Executing command: npm install
+[14:35:03.145] [INFO] Installing dependencies...: 
+added 172 packages, and audited 240 packages in 15s
+
+[14:35:03.145] [INFO] Installing dependencies...: added 172 packages, and a
+[14:35:03.145] [INFO] Installing dependencies...: 
+60 packages are looking for funding
+  run `npm fund` for details
+
+[14:35:03.145] [INFO] Installing dependencies...: 60 packages are looking f
+[14:35:03.149] [INFO] Installing dependencies...: 
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+[14:35:03.149] [INFO] Installing dependencies...: 2 moderate severity vulne
+[14:35:03.166] [INFO] Dependencies installed
+[14:35:03.166] [INFO] Dependencies installed
+[14:35:03.167] [INFO] Configuring @chromatic-com/storybook...
+[14:35:03.168] [INFO] @chromatic-com/storybook configured
+
+[14:35:03.168] [INFO] Configuring @storybook/addon-vitest...
+[14:35:03.169] [DEBUG] Getting package.json info for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:35:03.169] [DEBUG] Using cached package.json for /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/package.json...
+[14:35:03.169] [DEBUG] Getting installed version for vitest...
+[14:35:03.169] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:35:03.521] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:35:03.858] [DEBUG] Error finding installations for vitest: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:35:03.858] [DEBUG] No installations found for vitest
+[14:35:03.859] [DEBUG] Vitest version specifier: 4.0.18
+[14:35:03.917] [DEBUG] Using cached installed version for vitest...
+[14:35:03.917] [DEBUG] Getting installed version for msw...
+[14:35:03.917] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[14:35:04.283] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[14:35:04.611] [DEBUG] Error finding installations for msw: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.0.0",
+  "name": "ai-ready-storybook"
+}
+[14:35:04.611] [DEBUG] No installations found for msw
+[14:35:04.612] [INFO] Creating a Vitest setup file for Storybook:
+[14:35:04.612] [INFO] /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/.storybook/vitest.setup.ts
+
+[14:35:04.625] [INFO] Updating your Vite config file:
+[14:35:04.625] [INFO]   /Users/adirsl/Documents/GitHub/AI-Ready-Storybook/vite.config.ts
+[14:35:04.630] [INFO] Setting up a11y addon for @storybook/addon-vitest
+[14:35:04.630] [INFO] Setting up a11y addon for @storybook/addon-vitest
+[14:35:04.630] [DEBUG] Executing command: npx storybook@10.2.10 automigrate addon-a11y-addon-test --loglevel silent --yes --skip-doctor --package-manager npm --skip-install
+[14:35:20.467] [INFO] a11y addon setup successfully
+[14:35:20.467] [INFO] a11y addon setup successfully
+[14:35:20.467] [INFO] @storybook/addon-vitest setup completed successfully
+[14:35:20.467] [INFO] @storybook/addon-vitest is now configured and you're ready to run your tests!
+Here are a couple of tips to get you started:
+
+• You can run tests with "npx vitest --project=storybook"
+• Vitest IDE extension shows all stories as tests in your editor!
+
+Check the documentation for more information about its features and options at:
+https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
+[14:35:20.470] [INFO] @storybook/addon-vitest configured
+
+[14:35:20.470] [INFO] Configuring @storybook/addon-a11y...
+[14:35:20.470] [DEBUG] Executing command: npx storybook@10.2.10 automigrate addon-a11y-addon-test --loglevel silent --skip-doctor --yes --package-manager npm --config-dir .storybook
+[14:35:23.500] [INFO] @storybook/addon-a11y configured
+
+[14:35:23.500] [INFO] Configuring @storybook/addon-docs...
+[14:35:23.501] [INFO] @storybook/addon-docs configured
+
+[14:35:23.501] [INFO] Configuring @storybook/addon-onboarding...
+[14:35:23.501] [INFO] @storybook/addon-onboarding configured
+
+[14:35:23.502] [INFO] Addons configured successfully
+[14:35:23.502] [INFO] ✅ @chromatic-com/storybook
+[14:35:23.502] [INFO] ✅ @storybook/addon-vitest
+[14:35:23.502] [INFO] ✅ @storybook/addon-a11y
+[14:35:23.502] [INFO] ✅ @storybook/addon-docs
+[14:35:23.502] [INFO] ✅ @storybook/addon-onboarding
+[14:35:23.502] [INFO] Installing Playwright browser binaries (press "c" to abort)
+[14:35:23.502] [INFO] Installing Playwright browser binaries (press "c" to abort)
+[14:35:23.502] [DEBUG] Executing command: npx playwright install chromium --with-deps
+[14:43:14.745] [INFO] Installing Playwright browser binaries (press "c" to abort): Failed to install browsers
+Error: EACCES: permission denied, mkdir '/Users/adirsl/Library/Caches/ms-playwright/__dirlock'
+
+[14:43:14.745] [INFO] Installing Playwright browser binaries (press "c" to abort): Failed to install browser
+[14:43:14.773] [ERROR] An error occurred while installing Playwright browser binaries. Please run the following command later: npx playwright install chromium --with-deps {"error":"ExecaError: Command failed with exit code 1: npx playwright install chromium --with-deps\n\nFailed to install browsers\nError: EACCES: permission denied, mkdir '/Users/adirsl/Library/Caches/ms-playwright/__dirlock'\n    at getFinalError (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-URMZXQZT.js:13109:10)\n    at makeError (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-URMZXQZT.js:14645:15)\n    at getAsyncResult (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-URMZXQZT.js:17291:158)\n    at handlePromise (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-URMZXQZT.js:17277:162)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Object.executeTaskWithSpinner (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-7ZPQ47DO.js:3683:11)\n    at async AddonVitestService.installPlaywright (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/storybook/dist/_node-chunks/chunk-QQUKUQCR.js:5842:17)\n    at async AddonConfigurationCommand.execute (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/create-storybook/dist/_node-chunks/chunk-ZWXSN5R5.js:1969:26)\n    at async doInitiate (file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/create-storybook/dist/_node-chunks/chunk-ZWXSN5R5.js:2854:38)\n    at async file:///Users/adirsl/.npm/_npx/c888cdf029e30e47/node_modules/create-storybook/dist/_node-chunks/chunk-ZWXSN5R5.js:2882:20"}
+[14:43:14.773] [ERROR] An error occurred while installing Playwright browser binaries. Please run the following command later: npx playwright install chromium --with-deps
+[14:43:14.774] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
+[14:43:15.580] [WARN] Storybook setup completed, but some non-blocking errors occurred. Please check the log file below for details.
+[14:43:15.582] [INFO] To run Storybook manually, run npm run storybook. CTRL+C to stop.
+[14:43:15.583] [INFO] Wanna know more about Storybook? Check out https://storybook.js.org/
+Having trouble or want to chat? Join us at https://discord.gg/storybook/
