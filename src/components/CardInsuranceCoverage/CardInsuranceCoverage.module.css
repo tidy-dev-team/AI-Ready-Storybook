@@ -1,0 +1,72 @@
+@import '../../styles/tokens.css';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 32px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: var(--fw-medium);
+  color: var(--color-neutral-900);
+  line-height: 1.25;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab {
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  color: var(--color-neutral-600);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.33;
+}
+
+.tab:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.tabActive {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-border);
+  color: var(--color-neutral-900);
+  font-weight: var(--fw-medium);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
