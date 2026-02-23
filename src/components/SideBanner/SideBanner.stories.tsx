@@ -13,8 +13,20 @@ const meta: Meta<typeof SideBanner> = {
 export default meta;
 type Story = StoryObj<typeof SideBanner>;
 
-/** Default — shows the warm gradient fallback (no imageUrl needed) */
+/** Full design — matches the Figma spec exactly */
 export const Default: Story = {
+  args: {
+    imageUrl: '/side-banner-bg.png',
+    tag: '2025 Wrapped',
+    label: 'Total Contributions',
+    kpi: '$56,200',
+    badge: '🏆 Top Achievement',
+    description: 'Maximum pension contributions reached',
+  },
+};
+
+/** No background image — shows the warm CSS gradient fallback */
+export const NoImage: Story = {
   args: {
     tag: '2025 Wrapped',
     label: 'Total Contributions',
@@ -24,20 +36,10 @@ export const Default: Story = {
   },
 };
 
-/** Without a badge pill */
-export const NoBadge: Story = {
-  args: {
-    tag: '2025 Wrapped',
-    label: 'Total Contributions',
-    kpi: '$56,200',
-    badge: undefined,
-    description: 'Maximum pension contributions reached',
-  },
-};
-
-/** Without a tag */
+/** No tag pill at the top */
 export const NoTag: Story = {
   args: {
+    imageUrl: '/side-banner-bg.png',
     tag: undefined,
     label: 'Portfolio Value',
     kpi: '$128,450',
@@ -46,14 +48,14 @@ export const NoTag: Story = {
   },
 };
 
-/** Different content variant */
-export const HealthPlan: Story = {
+/** No badge — just label, KPI and description */
+export const NoBadge: Story = {
   args: {
-    tag: 'Health 2025',
-    label: 'Claims This Year',
-    kpi: '$3,840',
-    badge: '✅ Fully Covered',
-    description: 'No out-of-pocket expenses',
-    onLinkClick: () => alert('View plan details'),
+    imageUrl: '/side-banner-bg.png',
+    tag: 'Q1 2025',
+    label: 'Net Returns',
+    kpi: '+12.4%',
+    badge: undefined,
+    description: 'Above market average this quarter',
   },
 };

@@ -21,11 +21,11 @@ export interface SideBannerProps {
 
 export function SideBanner({
   imageUrl,
-  tag = '2025 Wrapped',
+  tag,
   onLinkClick,
   label = 'Total Contributions',
   kpi = '$56,200',
-  badge = '🏆 Top Achievement',
+  badge,
   description = 'Maximum pension contributions reached',
 }: SideBannerProps) {
   return (
