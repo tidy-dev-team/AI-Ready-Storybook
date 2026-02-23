@@ -33,15 +33,22 @@
 }
 
 /* States */
-.idle { background-color: var(--color-neutral-900); }
+.idle {
+  background-color: var(--color-neutral-900);
+}
 
-.hover { background-color: var(--color-neutral-700); }
+.hover {
+  background-color: var(--color-neutral-700);
+}
 
-.pressed { background-color: var(--color-neutral-900); opacity: 0.88; }
+.pressed {
+  background-color: var(--color-neutral-900);
+  opacity: 0.88;
+}
 
 .focus {
   background-color: var(--color-neutral-900);
-  box-shadow: 0 0 0 3px rgba(202, 184, 228, 0.7);
+  box-shadow: 0 0 0 3px #CBC8C8;
 }
 
 .disabled {
@@ -55,5 +62,5 @@
 }
 
 .btn:focus-visible {
-  box-shadow: 0 0 0 3px rgba(202, 184, 228, 0.7);
+  box-shadow: 0 0 0 3px #CBC8C8;
 }
