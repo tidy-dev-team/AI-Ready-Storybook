@@ -28,6 +28,7 @@ export { NavigationPanel }       from './NavigationPanel/NavigationPanel.tsx';
 export { CardKpi }               from './CardKpi/CardKpi.tsx';
 export { InsuranceCard }         from './InsuranceCard/InsuranceCard.tsx';
 export { CardInsuranceCoverage } from './CardInsuranceCoverage/CardInsuranceCoverage.tsx';
+export { SideBanner }            from './SideBanner/SideBanner.tsx';
 
 // Types
 export type { BadgeNumProps }             from './BadgeNum/BadgeNum.tsx';
@@ -49,3 +50,4 @@ export type { NavigationPanelProps }      from './NavigationPanel/NavigationPane
 export type { CardKpiProps }              from './CardKpi/CardKpi.tsx';
 export type { InsuranceCardProps }        from './InsuranceCard/InsuranceCard.tsx';
 export type { CardInsuranceCoverageProps } from './CardInsuranceCoverage/CardInsuranceCoverage.tsx';
+export type { SideBannerProps }            from './SideBanner/SideBanner.tsx';

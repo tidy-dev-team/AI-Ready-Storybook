@@ -1,0 +1,168 @@
+@import '../../styles/tokens.css';
+
+/* ─── Card shell ─────────────────────────────────────────────── */
+.card {
+  position: relative;
+  width: 302px;
+  height: 307px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  /*
+   * Default warm-gradient background that approximates the mountain-sunset photo.
+   * When imageUrl is passed via inline style="backgroundImage: url(...)", the
+   * inline declaration overrides only background-image, so the gradient overlay
+   * (which lives in ::before) is NOT affected — the overlay always renders.
+   */
+  background-image: linear-gradient(160deg, #f0c070 0%, #d4895a 30%, #9b5c3a 62%, #3d2010 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Gradient overlay (Figma: transparent → rgba(3,3,3,.49) → rgba(0,0,0,.55) bottom-to-top) */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55)   0%,
+    rgba(3, 3, 3, 0.49)   18%,
+    transparent           38%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Full-size inner wrapper (padding 24px) ─────────────────── */
+.inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* ─── Content frame (grows, SPACE_BETWEEN) ───────────────────── */
+.content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ─── Top row: tag pill + arrow button ───────────────────────── */
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Frosted glass pill */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Frosted glass circle button */
+.arrowBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.arrowBtn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* ─── KPI block (bottom of content area, over the gradient) ─── */
+.kpiBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kpiLabel {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.01em;
+}
+
+.kpiValue {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* ─── Text box (badge + description) ────────────────────────── */
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Cream pill badge matching Figma's warm "🏆 Top Achievement" pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 24px;
+  padding: 0 10px;
+  background: #f5e8c8;
+  border-radius: var(--radius-full);
+  color: #3d2010;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.description {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}

@@ -19,6 +19,7 @@ import {
   IconChevronDown,
   IconSend,
   IconSearch,
+  IconArrowUpRight,
 } from '@tabler/icons-react';
 
 interface IconProps {
@@ -67,6 +68,10 @@ export function SearchIcon({ size = 16, color = '#636363', className }: IconProp
 
 export function SendIcon({ size = 16, color = '#ffffff', className }: IconProps) {
   return <IconSend size={size} color={color} stroke={STROKE} className={className} />;
+}
+
+export function ArrowUpRightIcon({ size = 14, color = '#ffffff', className }: IconProps) {
+  return <IconArrowUpRight size={size} color={color} stroke={STROKE} className={className} />;
 }
 
 export type ChevronDirection = 'up' | 'down' | 'left' | 'right';
