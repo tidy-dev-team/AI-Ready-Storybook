@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styles from './SearchBar.module.css';
-import { SendIcon } from '../icons/index.tsx';
+import { SearchIcon, SendIcon } from '../icons/index.tsx';
 
 export type SearchBarState = 'idle' | 'focused' | 'disabled';
 export type SearchBarType = 'empty' | 'filled';
@@ -53,10 +53,7 @@ export function SearchBar({
   return (
     <div className={`${styles.wrapper} ${styles[effectiveState]} ${typeClass}`}>
       <div className={styles.leftContent}>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className={styles.searchIcon}>
-          <circle cx="7" cy="7" r="4.5" stroke="#636363" strokeWidth="1.25" />
-          <path d="M10.5 10.5L13.5 13.5" stroke="#636363" strokeWidth="1.25" strokeLinecap="round" />
-        </svg>
+        <SearchIcon size={16} color="#636363" className={styles.searchIcon} />
         <input
           ref={inputRef}
           type="text"
