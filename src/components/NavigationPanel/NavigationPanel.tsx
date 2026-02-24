@@ -3,7 +3,7 @@ import styles from './NavigationPanel.module.css';
 import { ListItem } from '../ListItem/ListItem.tsx';
 import { AvatarUser } from '../AvatarUser/AvatarUser.tsx';
 import { Divider } from '../Divider/Divider.tsx';
-import { SendIcon } from '../icons/index.tsx';
+import { ArrowNarrowRightIcon } from '../icons/index.tsx';
 import type { BadgeAvatarIcon } from '../BadgeAvatar/BadgeAvatar.tsx';
 
 export interface NavItem {
@@ -71,6 +71,7 @@ export function NavigationPanel({
               icon={item.icon}
               state={currentActive === item.id ? 'selected' : 'idle'}
               showChevron={item.showChevron}
+              chevronDirection="down"
               badgeCount={item.badgeCount}
               onClick={() => handleClick(item.id)}
             />
@@ -81,7 +82,7 @@ export function NavigationPanel({
       {/* Chat button */}
       <div className={styles.chatBtn}>
         <button type="button" className={styles.chatIcon} aria-label="Open chat">
-          <SendIcon size={14} color="#ffffff" />
+          <ArrowNarrowRightIcon size={16} color="#ffffff" />
         </button>
       </div>
     </nav>

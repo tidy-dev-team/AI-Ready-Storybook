@@ -22,18 +22,18 @@
   box-shadow: 0 0 0 2px var(--color-border-purple-focus);
 }
 
-.label {
+.labelGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   flex: 1;
+}
+
+.label {
   font-size: 14px;
   font-weight: var(--fw-regular);
   color: var(--color-neutral-900);
   line-height: 1.33;
-}
-
-.right {
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }
 
 /* States */
