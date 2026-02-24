@@ -18,7 +18,7 @@ export function Tag({ label, showChevron = false, icon, onClick }: TagProps) {
         {icon ?? <SwitchIcon size={16} color="#171717" />}
       </span>
       <span className={styles.label}>{label}</span>
-      {showChevron && <ChevronIcon size={16} color="#636363" direction="right" />}
+      {showChevron && <ChevronIcon size={16} color="#636363" direction="down" />}
     </button>
   );
 }
