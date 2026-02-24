@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styles from './SearchBar.module.css';
-import { SearchIcon, SendIcon } from '../icons/index.tsx';
+import { AiSparkleIcon, ArrowNarrowRightIcon } from '../icons/index.tsx';
 
 export type SearchBarState = 'idle' | 'focused' | 'disabled';
 export type SearchBarType = 'empty' | 'filled';
@@ -53,7 +53,7 @@ export function SearchBar({
   return (
     <div className={`${styles.wrapper} ${styles[effectiveState]} ${typeClass}`}>
       <div className={styles.leftContent}>
-        <SearchIcon size={16} color="#636363" className={styles.searchIcon} />
+        <AiSparkleIcon size={20} color="#2c2c2e" className={styles.searchIcon} />
         <input
           ref={inputRef}
           type="text"
@@ -75,7 +75,7 @@ export function SearchBar({
         disabled={state === 'disabled'}
         aria-label="Send"
       >
-        <SendIcon size={14} color={state === 'disabled' ? '#b0b0b0' : '#ffffff'} />
+        <ArrowNarrowRightIcon size={16} color={state === 'disabled' ? '#b0b0b0' : '#000f54'} />
       </button>
     </div>
   );

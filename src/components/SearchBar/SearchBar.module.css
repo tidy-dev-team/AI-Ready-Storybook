@@ -65,19 +65,19 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background-color: var(--color-neutral-900);
-  border: 1px solid var(--color-neutral-200);
+  background: linear-gradient(135deg, #fdf6d0 0%, #fce8f5 45%, #e8dffd 80%, #d8e8fe 100%);
+  border: 1px solid #ececea;
   border-radius: var(--radius-full);
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color 0.15s ease;
+  transition: opacity 0.15s ease;
 }
 
 .submitBtn:hover:not(:disabled) {
-  background-color: var(--color-neutral-700);
+  opacity: 0.8;
 }
 
 .submitBtn:disabled {
-  background-color: rgba(70, 87, 63, 0.1);
+  background: rgba(70, 87, 63, 0.1);
   cursor: not-allowed;
 }

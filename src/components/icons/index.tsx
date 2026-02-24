@@ -20,6 +20,8 @@ import {
   IconSend,
   IconSearch,
   IconArrowUpRight,
+  IconSparkles,
+  IconArrowNarrowRight,
 } from '@tabler/icons-react';
 
 interface IconProps {
@@ -72,6 +74,14 @@ export function SendIcon({ size = 16, color = '#ffffff', className }: IconProps)
 
 export function ArrowUpRightIcon({ size = 14, color = '#ffffff', className }: IconProps) {
   return <IconArrowUpRight size={size} color={color} stroke={STROKE} className={className} />;
+}
+
+export function AiSparkleIcon({ size = 20, color = '#2c2c2e', className }: IconProps) {
+  return <IconSparkles size={size} color={color} stroke={STROKE} className={className} />;
+}
+
+export function ArrowNarrowRightIcon({ size = 16, color = '#ffffff', className }: IconProps) {
+  return <IconArrowNarrowRight size={size} color={color} stroke={2} className={className} />;
 }
 
 export type ChevronDirection = 'up' | 'down' | 'left' | 'right';
