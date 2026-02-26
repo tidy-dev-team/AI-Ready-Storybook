@@ -30,6 +30,10 @@ export { InsuranceCard }         from './InsuranceCard/InsuranceCard.tsx';
 export { CardInsuranceCoverage } from './CardInsuranceCoverage/CardInsuranceCoverage.tsx';
 export { SideBanner }            from './SideBanner/SideBanner.tsx';
 
+// Screens
+export { Dashboard }              from './Dashboard/Dashboard.tsx';
+export { Dashboard2 }             from './Dashboard/Dashboard2.tsx';
+
 // Types
 export type { BadgeNumProps }             from './BadgeNum/BadgeNum.tsx';
 export type { TrendBadgeProps }           from './TrendBadge/TrendBadge.tsx';
@@ -51,3 +55,5 @@ export type { CardKpiProps }              from './CardKpi/CardKpi.tsx';
 export type { InsuranceCardProps }        from './InsuranceCard/InsuranceCard.tsx';
 export type { CardInsuranceCoverageProps } from './CardInsuranceCoverage/CardInsuranceCoverage.tsx';
 export type { SideBannerProps }            from './SideBanner/SideBanner.tsx';
+export type { DashboardProps }             from './Dashboard/Dashboard.tsx';
+export type { Dashboard2Props }            from './Dashboard/Dashboard2.tsx';

@@ -3,8 +3,8 @@ import styles from './SideBanner.module.css';
 import { ArrowUpRightIcon } from '../icons/index.tsx';
 
 export interface SideBannerProps {
-  /** Background photo URL — fill-covers the whole card */
-  imageUrl?: string;
+  /** Hide the background photo and show the warm gradient fallback instead */
+  hideImage?: boolean;
   /** Frosted glass pill shown top-left (e.g. "2025 Wrapped") */
   tag?: string;
   /** Called when the top-right arrow button is clicked */
@@ -20,7 +20,7 @@ export interface SideBannerProps {
 }
 
 export function SideBanner({
-  imageUrl,
+  hideImage = false,
   tag,
   onLinkClick,
   label = 'Total Contributions',
@@ -29,10 +29,7 @@ export function SideBanner({
   description = 'Maximum pension contributions reached',
 }: SideBannerProps) {
   return (
-    <div
-      className={styles.card}
-      style={imageUrl ? { backgroundImage: `url(${imageUrl})` } : undefined}
-    >
+    <div className={`${styles.card} ${hideImage ? styles.noImage : ''}`}>
       <div className={styles.inner}>
         {/* Content area — SPACE_BETWEEN: tag row at top, KPI block at bottom */}
         <div className={styles.content}>

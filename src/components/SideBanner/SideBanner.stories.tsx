@@ -13,10 +13,9 @@ const meta: Meta<typeof SideBanner> = {
 export default meta;
 type Story = StoryObj<typeof SideBanner>;
 
-/** Full design — matches the Figma spec exactly */
+/** Full design — background photo shown by default */
 export const Default: Story = {
   args: {
-    imageUrl: '/side-banner-bg.png',
     tag: '2025 Wrapped',
     label: 'Total Contributions',
     kpi: '$56,200',
@@ -25,9 +24,10 @@ export const Default: Story = {
   },
 };
 
-/** No background image — shows the warm CSS gradient fallback */
+/** hideImage={true} — shows the warm gradient fallback */
 export const NoImage: Story = {
   args: {
+    hideImage: true,
     tag: '2025 Wrapped',
     label: 'Total Contributions',
     kpi: '$56,200',
@@ -39,7 +39,6 @@ export const NoImage: Story = {
 /** No tag pill at the top */
 export const NoTag: Story = {
   args: {
-    imageUrl: '/side-banner-bg.png',
     tag: undefined,
     label: 'Portfolio Value',
     kpi: '$128,450',
@@ -51,7 +50,6 @@ export const NoTag: Story = {
 /** No badge — just label, KPI and description */
 export const NoBadge: Story = {
   args: {
-    imageUrl: '/side-banner-bg.png',
     tag: 'Q1 2025',
     label: 'Net Returns',
     kpi: '+12.4%',

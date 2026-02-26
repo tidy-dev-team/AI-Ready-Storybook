@@ -10,16 +10,16 @@
   overflow: hidden;
   flex-shrink: 0;
 
-  /*
-   * Default warm-gradient background that approximates the mountain-sunset photo.
-   * When imageUrl is passed via inline style="backgroundImage: url(...)", the
-   * inline declaration overrides only background-image, so the gradient overlay
-   * (which lives in ::before) is NOT affected — the overlay always renders.
-   */
-  background-image: linear-gradient(160deg, #f0c070 0%, #d4895a 30%, #9b5c3a 62%, #3d2010 100%);
+  /* Default: mountain-sunset photo */
+  background-image: url('/side-banner-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* hideImage={true} — replace the photo with the warm gradient fallback */
+.noImage {
+  background-image: linear-gradient(160deg, #f0c070 0%, #d4895a 30%, #9b5c3a 62%, #3d2010 100%);
 }
 
 /* Gradient overlay (Figma: transparent → rgba(3,3,3,.49) → rgba(0,0,0,.55) bottom-to-top) */
