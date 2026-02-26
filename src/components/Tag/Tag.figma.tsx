@@ -17,6 +17,7 @@ figma.connect(
       // These props were automatically mapped based on your linked code:
       showChevron: figma.boolean("chevron"),
       icon: figma.instance("icon"),
+      label: figma.string("text ✏️"),
       // No matching props could be found for these Figma properties:
       // "text": figma.string('text ✏️'),
       // "icon": figma.instance('icon'),
@@ -31,7 +32,7 @@ figma.connect(
     },
     example: (props) => (
       <Tag
-        label={/* TODO */}
+        label={props.label}
         showChevron={props.showChevron}
         icon={props.icon}
       />
