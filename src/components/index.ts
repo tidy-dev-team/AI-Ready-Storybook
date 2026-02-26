@@ -33,6 +33,8 @@ export { SideBanner }            from './SideBanner/SideBanner.tsx';
 // Screens
 export { Dashboard }              from './Dashboard/Dashboard.tsx';
 export { Dashboard2 }             from './Dashboard/Dashboard2.tsx';
+export { Dashboard3 }             from './Dashboard/Dashboard3.tsx';
+export { Dashboard4 }             from './Dashboard/Dashboard4.tsx';
 
 // Types
 export type { BadgeNumProps }             from './BadgeNum/BadgeNum.tsx';
@@ -57,3 +59,5 @@ export type { CardInsuranceCoverageProps } from './CardInsuranceCoverage/CardIns
 export type { SideBannerProps }            from './SideBanner/SideBanner.tsx';
 export type { DashboardProps }             from './Dashboard/Dashboard.tsx';
 export type { Dashboard2Props }            from './Dashboard/Dashboard2.tsx';
+export type { Dashboard3Props }            from './Dashboard/Dashboard3.tsx';
+export type { Dashboard4Props }            from './Dashboard/Dashboard4.tsx';
