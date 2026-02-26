@@ -11,15 +11,17 @@ import figma from "@figma/code-connect"
 
 figma.connect(
   CardKpi,
-  "https://www.figma.com/design/7LWL1TZvifdDf8Oz2AH1tZ/AI-Demo-design?node-id=21%3A4679",
+  "https://www.figma.com/design/7LWL1TZvifdDf8Oz2AH1tZ/AI-Demo-design?node-id=19-396&t=VTc5uMKDtwwNHV2h-4",
   {
     props: {
       // These props were automatically mapped based on your linked code:
-      title: figma.string("text"),
+      title: figma.string("card title"),
+      kpiLabel: figma.string("kpi title ✏️"),
+      kpiValue: figma.string("kpi num ✏️")
       // No matching props could be found for these Figma properties:
       // "num": figma.string('num'),
       // "text": figma.string('text')
     },
-    example: (props) => <CardKpi title={props.title} />,
+    example: (props) => <CardKpi title={props.title} kpiLabel={props.kpiLabel} kpiValue={props.kpiValue} />,
   },
 )
