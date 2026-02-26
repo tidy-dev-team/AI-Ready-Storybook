@@ -27,34 +27,40 @@ function PensionCardContent() {
   );
 }
 
-// ── Right card slot: allocation bar chart + fund breakdown list ────────────
+// ── Right card slot: allocation bar chart + fund breakdown legend ──────────
 
 const FUNDS = [
-  { label: 'Training Fund',   amount: '$124,850', pct: '49.4%', color: '#B4B0E8', heightPct: 72 },
-  { label: 'Investment Fund', amount: '$82,547',  pct: '32.7%', color: '#BDC9B0', heightPct: 52 },
-  { label: 'Money Market',    amount: '$45,230',  pct: '17.9%', color: '#F2CB45', heightPct: 32 },
+  { label: 'Training Fund',   amount: '$124,850', pct: '49.4%', color: '#B4B0E8', barHeight: 200 },
+  { label: 'Investment Fund', amount: '$82,547',  pct: '32.7%', color: '#B5C4AA', barHeight: 165 },
+  { label: 'Money Market',    amount: '$45,230',  pct: '17.9%', color: '#F0C842', barHeight: 125 },
 ];
 
 function PortfolioCardContent() {
   return (
     <div className={styles.portfolioContent}>
+      {/* Bars — fixed-height container so barHeight px values are reliable */}
       <div className={styles.barChart}>
         {FUNDS.map((f) => (
-          <div key={f.label} className={styles.barCol}>
-            <div
-              className={styles.bar}
-              style={{ height: `${f.heightPct}%`, backgroundColor: f.color }}
-            />
-          </div>
+          <div
+            key={f.label}
+            className={styles.bar}
+            style={{ height: f.barHeight, backgroundColor: f.color }}
+          />
         ))}
       </div>
+
+      {/* 3-column legend */}
       <div className={styles.fundList}>
         {FUNDS.map((f) => (
           <div key={f.label} className={styles.fundItem}>
-            <span className={styles.fundDot} style={{ backgroundColor: f.color }} />
-            <span className={styles.fundLabel}>{f.label}</span>
-            <span className={styles.fundAmount}>{f.amount}</span>
-            <span className={styles.fundPct}>{f.pct}</span>
+            <div className={styles.fundName}>
+              <span className={styles.fundDot} style={{ backgroundColor: f.color }} />
+              <span className={styles.fundLabel}>{f.label}</span>
+            </div>
+            <div className={styles.fundValues}>
+              <span className={styles.fundAmount}>{f.amount}</span>
+              <span className={styles.fundPct}>{f.pct}</span>
+            </div>
           </div>
         ))}
       </div>

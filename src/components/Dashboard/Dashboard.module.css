@@ -94,38 +94,38 @@
   height: 100%;
 }
 
-/* Fixed-height container so bar percentage heights resolve correctly */
+/* Fixed-height bar row — bars are absolute px so they don't need % resolution */
 .barChart {
-  flex: 1;
-  min-height: 180px;
   display: flex;
   align-items: flex-end;
-  gap: 10px;
-}
-
-.barCol {
-  flex: 1;
-  height: 100%;
-  min-height: 180px;
-  display: flex;
-  align-items: flex-end;
+  gap: 12px;
+  height: 210px;
+  flex-shrink: 0;
 }
 
 .bar {
-  width: 100%;
-  border-radius: 12px;
+  flex: 1;
+  border-radius: 16px;
 }
 
+/* 3-column legend matching the Figma layout */
 .fundList {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
+/* Each column: name row + value row */
 .fundItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fundName {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
 }
 
 .fundDot {
@@ -140,12 +140,18 @@
   font-size: 13px;
   font-weight: var(--fw-regular);
   color: var(--color-neutral-600);
-  flex: 1;
+  line-height: 1.2;
+}
+
+.fundValues {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
 }
 
 .fundAmount {
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: var(--fw-medium);
   color: var(--color-neutral-900);
   letter-spacing: -0.03em;
@@ -156,8 +162,6 @@
   font-size: 13px;
   font-weight: var(--fw-regular);
   color: var(--color-neutral-600);
-  min-width: 38px;
-  text-align: right;
 }
 
 /* ── Bottom row ─────────────────────────────────────────────────────────── */
