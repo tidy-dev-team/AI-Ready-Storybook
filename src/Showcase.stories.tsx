@@ -60,6 +60,59 @@ const COVERAGE_ITEMS = [
 
 /* ── inline chart svg ─────────────────────────────────────────────────────── */
 
+const BarChart = () => {
+  const bars = [
+    { month: "Feb", value: 83 },
+    { month: "Mar", value: 110 },
+    { month: "Apr", value: 98 },
+    { month: "May", value: 130 },
+    { month: "Jun", value: 118 },
+    { month: "Jul", value: 150 },
+  ];
+  const maxVal = 160;
+  const chartH = 200;
+  const barW = 22;
+  const gap = 16;
+  const totalW = bars.length * (barW + gap) - gap;
+  return (
+    <svg
+      viewBox={`0 0 ${totalW} ${chartH + 24}`}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", height: "100%", display: "block" }}
+    >
+      {bars.map((b, i) => {
+        const barH = (b.value / maxVal) * chartH;
+        const x = i * (barW + gap);
+        const y = chartH - barH;
+        const isLast = i === bars.length - 1;
+        return (
+          <g key={b.month}>
+            <rect
+              x={x}
+              y={y}
+              width={barW}
+              height={barH}
+              rx={5}
+              fill={isLast ? "#007a55" : "#e8e8e8"}
+            />
+            <text
+              x={x + barW / 2}
+              y={chartH + 16}
+              textAnchor="middle"
+              fontSize="7"
+              fill="#636363"
+              fontFamily="Inter, system-ui, sans-serif"
+            >
+              {b.month}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+};
+
 const AreaChart = () => {
   const points = [
     { x: 0, y: 220 },
@@ -214,17 +267,6 @@ export const Dashboard: Story = {
           {/* 4. Bottom search bar */}
           <SearchBar placeholder="Ask me anything..." />
 
-          {/* 5. Bottom row */}
-          <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-            <Button label="Button" state="idle" />
-            <Button label="With icon" state="idle" />
-            <TextButton label="View details" showChevron />
-            <TextButton label="See all" />
-            <BadgeNum count={3} />
-            <TrendBadge value="+12.4%" direction="positive" />
-            <BadgeAvatar icon="mail" fill="no" dot />
-            <Tag label="Tag" showChevron />
-          </div>
         </div>
 
         {/* ════════════════════════════════════════════════════════════ */}
@@ -263,19 +305,25 @@ export const Dashboard: Story = {
               alignItems: "flex-start",
             }}
           >
-            {/* Navigation Panel */}
-            <div
-              style={{
-                borderRadius: 16,
-                overflow: "hidden",
-                border: "1px solid #f0f0ec",
-              }}
-            >
-              <NavigationPanel
-                defaultActiveId="pension"
-                userName="David"
-                userPlan="Premium Plan"
-              />
+            {/* Navigation Panel + buttons below */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              <div
+                style={{
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  border: "1px solid #f0f0ec",
+                }}
+              >
+                <NavigationPanel
+                  defaultActiveId="pension"
+                  userName="David"
+                  userPlan="Premium Plan"
+                />
+              </div>
+              <Button label="Get started" state="idle" />
+              <Button label="Hover" state="hover" />
+              <Button label="Pressed" state="pressed" />
+              <Button label="Disabled" state="disabled" />
             </div>
 
             {/* Right sub-column */}
@@ -320,18 +368,32 @@ export const Dashboard: Story = {
                 />
               </div>
 
-              {/* Second KPI Card */}
-              <CardKpi
-                title="Example Card"
-                icon="savings"
-                kpiValue="$920,567"
-                kpiLabel="Total Balance"
-                trend="8.2%"
-                trendDirection="positive"
-                ctaLabel="View Account"
-              >
-                <AreaChart />
-              </CardKpi>
+              {/* Second KPI Card + bottom row side by side */}
+              <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                <div style={{ flexShrink: 0 }}>
+                  <CardKpi
+                    title="Example Card"
+                    icon="savings"
+                    kpiValue="$920,567"
+                    kpiLabel="Total Balance"
+                    trend="8.2%"
+                    trendDirection="positive"
+                    ctaLabel="View Account"
+                  >
+                    <BarChart />
+                  </CardKpi>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+                  <Button label="Button" state="idle" />
+                  <Button label="With icon" state="idle" />
+                  <TextButton label="View details" showChevron />
+                  <TextButton label="See all" />
+                  <BadgeNum count={3} />
+                  <TrendBadge value="+12.4%" direction="positive" />
+                  <BadgeAvatar icon="mail" fill="no" dot />
+                  <Tag label="Tag" showChevron />
+                </div>
+              </div>
             </div>
           </div>
         </div>
