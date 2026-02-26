@@ -3,7 +3,6 @@ import styles from './NavigationPanel.module.css';
 import { ListItem } from '../ListItem/ListItem.tsx';
 import { AvatarUser } from '../AvatarUser/AvatarUser.tsx';
 import { Divider } from '../Divider/Divider.tsx';
-import { ArrowNarrowRightIcon } from '../icons/index.tsx';
 import type { BadgeAvatarIcon } from '../BadgeAvatar/BadgeAvatar.tsx';
 
 export interface NavItem {
@@ -78,13 +77,6 @@ export function NavigationPanel({
           </li>
         ))}
       </ul>
-
-      {/* Chat button */}
-      <div className={styles.chatBtn}>
-        <button type="button" className={styles.chatIcon} aria-label="Open chat">
-          <ArrowNarrowRightIcon size={16} color="#ffffff" />
-        </button>
-      </div>
     </nav>
   );
 }
