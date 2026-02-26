@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './CardInsuranceCoverage.module.css';
 import { InsuranceCard } from '../InsuranceCard/InsuranceCard.tsx';
 import { TextButton } from '../TextButton/TextButton.tsx';
 import { CategoryIcon } from '../CategoryIcon/CategoryIcon.tsx';
+import { AvatarUser } from '../AvatarUser/AvatarUser.tsx';
+import { AvatarMember } from '../AvatarMember/AvatarMember.tsx';
 import type { CategoryIconType } from '../CategoryIcon/CategoryIcon.tsx';
 
 export interface InsuranceCoverageItem {
@@ -14,19 +16,10 @@ export interface InsuranceCoverageItem {
   monthlyPremium: string;
 }
 
-export type CoverageTab = 'all' | 'active' | 'pending';
-
 const DEFAULT_ITEMS: InsuranceCoverageItem[] = [
-  { id: '1', title: 'Life',     icon: 'shield',   provider: 'Harel',  coverage: '$1,200,000', monthlyPremium: '$450' },
-  { id: '2', title: 'Health',   icon: 'headset',  provider: 'Maccabi', coverage: '$500,000',  monthlyPremium: '$320' },
-  { id: '3', title: 'Pension',  icon: 'wallet',   provider: 'Phoenix', coverage: '$840,000',  monthlyPremium: '$650' },
-  { id: '4', title: 'Savings',  icon: 'savings',  provider: 'Migdal',  coverage: '$200,000',  monthlyPremium: '$180' },
-];
-
-const TABS: { id: CoverageTab; label: string }[] = [
-  { id: 'all',     label: 'All' },
-  { id: 'active',  label: 'Active' },
-  { id: 'pending', label: 'Pending' },
+  { id: '1', title: 'Life',       icon: 'shield',  provider: 'Harel',  coverage: '$1,200,000', monthlyPremium: '$450' },
+  { id: '2', title: 'Disability', icon: 'headset', provider: 'Migdal', coverage: '$8,500/mo',  monthlyPremium: '$280' },
+  { id: '3', title: 'Health',     icon: 'savings', provider: 'Clal',   coverage: '$1,500,000', monthlyPremium: '$320' },
 ];
 
 export interface CardInsuranceCoverageProps {
@@ -40,42 +33,41 @@ export function CardInsuranceCoverage({
   items = DEFAULT_ITEMS,
   onViewAll,
 }: CardInsuranceCoverageProps) {
-  const [activeTab, setActiveTab] = useState<CoverageTab>('all');
-
   return (
     <div className={styles.card}>
+
+      {/* Header */}
       <div className={styles.header}>
         <div className={styles.titleRow}>
           <CategoryIcon icon="shield" />
           <span className={styles.title}>{title}</span>
         </div>
-        <div className={styles.tabs}>
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className={styles.members}>
+          <AvatarUser name="David" member="1" active />
+          <AvatarMember member="2" />
+          <AvatarMember member="3" />
+          <AvatarMember member="4" />
+          <button className={styles.addBtn} type="button" aria-label="Add member">+</button>
         </div>
-        <TextButton label="View Full Portfolio" onClick={onViewAll} />
       </div>
 
-      <div className={styles.cards}>
-        {items.map((item) => (
-          <InsuranceCard
-            key={item.id}
-            title={item.title}
-            icon={item.icon}
-            provider={item.provider}
-            coverage={item.coverage}
-            monthlyPremium={item.monthlyPremium}
-          />
-        ))}
+      {/* Cards + CTA */}
+      <div className={styles.content}>
+        <div className={styles.cards}>
+          {items.map((item) => (
+            <InsuranceCard
+              key={item.id}
+              title={item.title}
+              icon={item.icon}
+              provider={item.provider}
+              coverage={item.coverage}
+              monthlyPremium={item.monthlyPremium}
+            />
+          ))}
+        </div>
+        <TextButton label="View Full Portfolio" showChevron onClick={onViewAll} />
       </div>
+
     </div>
   );
 }

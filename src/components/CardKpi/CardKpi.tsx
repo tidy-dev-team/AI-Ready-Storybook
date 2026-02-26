@@ -19,11 +19,11 @@ export interface CardKpiProps {
 }
 
 export function CardKpi({
-  title = 'Total Pension',
+  title = 'Pension Portfolio',
   icon = 'wallet',
-  kpiValue = '$84,200',
-  kpiLabel = 'Total balance',
-  trend = '+12.4%',
+  kpiValue = '$847,320',
+  kpiLabel = 'Total Balance',
+  trend = '12.4%',
   trendDirection = 'positive',
   ctaLabel = 'View Full Portfolio',
   onCtaClick,
@@ -46,7 +46,12 @@ export function CardKpi({
           <span className={styles.kpiLabel}>{kpiLabel}</span>
           <div className={styles.kpiRow}>
             <span className={styles.kpiValue}>{kpiValue}</span>
-            {trend && <TrendBadge value={trend} direction={trendDirection} />}
+            {trend && (
+              <TrendBadge
+                value={`${trendDirection === 'positive' ? '+' : '−'}${trend.replace(/^[+\-−]/, '')}`}
+                direction={trendDirection}
+              />
+            )}
           </div>
         </div>
 
@@ -54,15 +59,7 @@ export function CardKpi({
         {children ? (
           <div className={styles.chartSlot}>{children}</div>
         ) : (
-          <div className={styles.chartPlaceholder} aria-hidden="true">
-            <svg viewBox="0 0 333 120" fill="none" className={styles.chartSvg}>
-              <path d="M0 90 C40 80, 80 30, 120 50 S200 80, 240 40 S300 10, 333 20" stroke="#E8E8E8" strokeWidth="2" fill="none" />
-              <path d="M0 90 C40 80, 80 30, 120 50 S200 80, 240 40 S300 10, 333 20 V120 H0 Z" fill="rgba(0,122,85,0.04)" />
-              {[0, 40, 80, 120, 160, 200, 240, 280, 320].map((x, i) => (
-                <line key={i} x1={x} y1="0" x2={x} y2="120" stroke="#F5F5F3" strokeWidth="1" />
-              ))}
-            </svg>
-          </div>
+          <div className={styles.chartPlaceholder} aria-hidden="true" />
         )}
       </div>
     </div>
