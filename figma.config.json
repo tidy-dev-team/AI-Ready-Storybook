@@ -1,7 +1,0 @@
-{
-  "codeConnect": {
-    "include": ["src/components/**/*.figma.js"],
-    "label": "React",
-    "language": "tsx"
-  }
-}
