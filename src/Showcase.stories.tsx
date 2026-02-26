@@ -210,6 +210,21 @@ export const Dashboard: Story = {
               <Button label="With icon" state="idle" />
             </div>
           </div>
+
+          {/* 4. Bottom search bar */}
+          <SearchBar placeholder="Ask me anything..." />
+
+          {/* 5. Bottom row */}
+          <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+            <Button label="Button" state="idle" />
+            <Button label="With icon" state="idle" />
+            <TextButton label="View details" showChevron />
+            <TextButton label="See all" />
+            <BadgeNum count={3} />
+            <TrendBadge value="+12.4%" direction="positive" />
+            <BadgeAvatar icon="mail" fill="no" dot />
+            <Tag label="Tag" showChevron />
+          </div>
         </div>
 
         {/* ════════════════════════════════════════════════════════════ */}
@@ -322,30 +337,6 @@ export const Dashboard: Story = {
         </div>
       </div>
 
-      {/* ── Bottom search bar — spans left col + nav col (789px) ──── */}
-      <div style={{ marginTop: 40, width: 789 }}>
-        <SearchBar placeholder="Ask me anything..." />
-      </div>
-
-      {/* ── Bottom row (Frame 2018782653) ────────────────────────── */}
-      <div
-        style={{
-          marginTop: 16,
-          width: 789,
-          display: "flex",
-          gap: 8,
-          alignItems: "center",
-        }}
-      >
-        <Button label="Button" state="idle" />
-        <Button label="With icon" state="idle" />
-        <TextButton label="View details" showChevron />
-        <TextButton label="See all" />
-        <BadgeNum count={3} />
-        <TrendBadge value="+12.4%" direction="positive" />
-        <BadgeAvatar icon="mail" fill="no" dot />
-        <Tag label="Tag" showChevron />
-      </div>
     </div>
   ),
 };
