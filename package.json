@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "figma:publish": "figma connect publish -c figma.config.json --skip-validation",
+    "figma:publish:validate": "figma connect publish -c figma.config.json"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.37.1",
@@ -16,6 +18,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@figma/code-connect": "^1.4.1",
     "@chromatic-com/storybook": "^5.0.1",
     "@storybook/addon-a11y": "^10.2.10",
     "@storybook/addon-docs": "^10.2.10",
