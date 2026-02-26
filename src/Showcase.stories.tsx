@@ -279,21 +279,6 @@ export const Dashboard: Story = {
           </CardKpi>
         </Tile>
 
-        {/* ── KPI Card with image ── tall anchor for col 2 */}
-        <Tile>
-          <CardKpi
-            title="Savings Account"
-            icon="savings"
-            kpiValue="$32,500"
-            kpiLabel="Total Savings"
-            trend="5.8%"
-            trendDirection="positive"
-            ctaLabel="View Account"
-          >
-            <CardPhoto />
-          </CardKpi>
-        </Tile>
-
         {/* ── Navigation ── tall anchor for col 2 */}
         <Tile>
           <div
@@ -311,6 +296,21 @@ export const Dashboard: Story = {
               userPlan="Premium Plan"
             />
           </div>
+        </Tile>
+
+        {/* ── KPI Card with image ── tall anchor for col 3 */}
+        <Tile>
+          <CardKpi
+            title="Savings Account"
+            icon="savings"
+            kpiValue="$32,500"
+            kpiLabel="Total Savings"
+            trend="5.8%"
+            trendDirection="positive"
+            ctaLabel="View Account"
+          >
+            <CardPhoto />
+          </CardKpi>
         </Tile>
 
         {/* ── Side Banner ── medium-tall anchor for col 3 */}
