@@ -17,5 +17,5 @@
 3. This should make a path breadcrumbs appear at the bottom
 4. Right click on the last crumb (the folder should be "AI-Ready-Storybook")
 5. Select "Open in Terminal"
-6. Type "cluade" in Terminal window
+6. Type "claude" in Terminal window
 7. wait 2 seconds for it to load
